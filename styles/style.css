@@ -43,7 +43,7 @@ header nav ul li a {
 
 /* Hero Section */
 .hero {
-  background-image: linear-gradient(90deg, black, orange, white);
+  background-image: linear-gradient(90deg, black, red, white);
   color: white;
   height: 100vh;
   display: flex;
