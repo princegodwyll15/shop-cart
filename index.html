@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hair & Oil Products</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1>Natural Hair & Oil Products</h1>
+      <p>Discover the benefits of nature for healthy hair.</p>
+      <button id="shopNowBtn">Shop Now</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>
+        We provide organic hair oils and products that nourish your hair and
+        scalp.
+      </p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/product-1.jpg" alt="Hair Oil" />
+          <h3>Argan Oil</h3>
+          <p>For smooth and shiny hair</p>
+          <button class="addToCartBtn" data-product="Argan Oil">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="images/product-2.jpg" alt="Hair Serum" />
+          <h3>Hair Growth Serum</h3>
+          <p>Promotes hair growth</p>
+          <button class="addToCartBtn" data-product="Hair Growth Serum">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="images/product-3.jpg" alt="Hair Serum" />
+          <h3>Hair Growth Serum</h3>
+          <p>Promotes hair growth</p>
+          <button class="addToCartBtn" data-product="Hair Growth Serum">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="images/product-4.jpg" alt="Hair Serum" />
+          <h3>Hair Growth Serum</h3>
+          <p>Promotes hair growth</p>
+          <button class="addToCartBtn" data-product="Hair Growth Serum">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="images/product-5.jpg" alt="Hair Serum" />
+          <h3>Hair Growth Serum</h3>
+          <p>Promotes hair growth</p>
+          <button class="addToCartBtn" data-product="Hair Growth Serum">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="images/product-6.jpg" alt="Hair Serum" />
+          <h3>Hair Growth Serum</h3>
+          <p>Promotes hair growth</p>
+          <button class="addToCartBtn" data-product="Hair Growth Serum">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Add more product cards as needed -->
+      </div>
+    </section>
+
+    <!-- Cart Section (hidden until items are added) -->
+    <section id="cart" class="cart" style="display: none">
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <button id="checkoutBtn">Checkout</button>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <p>"These oils transformed my hair!" - Sarah</p>
+      <p>"Love the natural ingredients!" - John</p>
+      <form id="contactForm">
+        <input
+          type="text"
+          placeholder="your name here please"
+          id="userName"
+          required
+        /><br />
+        <input
+          type="text"
+          placeholder="leave a comment"
+          id="comment"
+          required
+        /><br />
+      </form>
+      <button type="submit" id="Sendmessage" onclick="messageSent()">
+        comment
+      </button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" id="name" required /><br />
+        <input
+          type="email"
+          placeholder="Your Email"
+          id="email"
+          required
+        /><br />
+        <textarea placeholder="Your Message" id="message" required></textarea
+        ><br />
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Hair & Oil Products</p>
+      <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
