@@ -223,11 +223,10 @@ button:hover {
     align-items: center;
   }
 
+
   .product-card {
     width: 80%;
-    margin-bottom: 20px;
   }
-
   .product-card img {
     width: 100%;
   }
