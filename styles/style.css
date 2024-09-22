@@ -110,7 +110,7 @@ header nav ul li a {
 .contact #contactform,
 input,
 textarea {
-  width: 250px;
+  width: auto;
   resize: none;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -220,17 +220,26 @@ button:hover {
 
 /* Small Devices (Mobile) */
 @media (max-width: 768px) {
+  header h3 {
+    display: none;
+  }
   header nav ul {
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 10px;
   }
 
   header nav ul li {
-    display: block;
+    display: inline;
+    padding: 0.5rem;
     margin: 10px 0;
   }
+  header nav ul li a {
+    font-size: 13px;
+    border-left: 1px soild orange;
+  }
+
   .hero {
-    height: 50vh;
+    height: 20vh;
   }
 
   .hero h1 {
@@ -279,6 +288,11 @@ button:hover {
 
 /* Medium Devices (Tablets) */
 @media (max-width: 1024px) {
+  header h3,
+  span {
+    font-size: 12px;
+  }
+
   .hero {
     height: 50vh;
   }
@@ -298,6 +312,10 @@ button:hover {
   }
   .product-card img {
     width: 100%;
+  }
+  .comment-contact-container {
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 
