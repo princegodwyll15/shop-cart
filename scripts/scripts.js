@@ -49,23 +49,37 @@ document.getElementById("checkoutBtn").addEventListener("click", function () {
   document.getElementById("cart").style.display = "none";
 });
 
-// Contact Form Submission
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent form from reloading the page
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
+getSelector = document.querySelectorAll("a");
+getSelector[0].classList.add("active");
 
-  // Simple validation (you could add more)
-  if (name && email && message) {
-    alert("Thank you for your message, " + name + "!");
-    document.getElementById("contactForm").reset(); // Reset form after submission
-  } else {
-    alert("Please fill in all fields.");
-  }
+getSelector.forEach((selector) => {
+  selector.addEventListener("click", () => {
+    getSelector.forEach((otherSelector) =>
+      otherSelector.classList.remove("active")
+    );
+    selector.classList.add("active");
+  });
 });
 
-function messageSent() {
-  const disMsg = alert("Thanks for your feedback we are working on it");
-  document.getElementById("sendmessage").innerHTML = disMsg;
-}
+// Get input elements
+const userNameInput = document.getElementById("userName");
+const commentInput = document.getElementById("comment");
+const createCommentElement = document.getElementById("appendComment");
+const sendMessageButton = document.getElementById("Sendmessage");
+
+// Add event listener to send message button
+sendMessageButton.addEventListener("click", () => {
+  const userName = userNameInput.value.trim();
+  const comment = commentInput.value.trim();
+
+  // Validate input
+  if (userName && comment) {
+    // Append comment to paragraph
+    createCommentElement.innerHTML += `${comment} - ${userName}<br>`;
+    // Clear input fields
+    userNameInput.value = "";
+    commentInput.value = "";
+  } else {
+    alert("Please enter both username and comment.");
+  }
+});
