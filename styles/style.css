@@ -242,7 +242,7 @@ button:hover {
   }
 
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .hero p {
@@ -272,6 +272,9 @@ button:hover {
   .testimonials,
   .contact {
     padding: 30px 10px;
+  }
+  .about {
+    width: 70%;
   }
   .comment-contact-container {
     flex-wrap: wrap;
