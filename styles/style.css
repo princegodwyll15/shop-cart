@@ -99,7 +99,7 @@ header nav ul li a {
 }
 .comment-contact-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto/auto auto;
   gap: 20px;
 }
 .testimonials,
@@ -277,8 +277,9 @@ button:hover {
     width: 70%;
   }
   .comment-contact-container {
-    flex-wrap: wrap;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto/auto auto;
+    gap: 20px;
   }
 
   footer .social-media {
@@ -316,8 +317,8 @@ button:hover {
     width: 100%;
   }
   .comment-contact-container {
-    flex-wrap: wrap;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto/auto auto;
   }
 }
 
