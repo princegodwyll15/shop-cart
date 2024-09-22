@@ -98,11 +98,14 @@ header nav ul li a {
   width: 50%;
   margin: auto;
 }
+.comment-contact-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
 .testimonials,
 .contact {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 50%;
-  margin: auto;
 }
 .contact #contactform,
 input,
@@ -261,6 +264,10 @@ button:hover {
   .testimonials,
   .contact {
     padding: 30px 10px;
+  }
+  .comment-contact-container {
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   footer .social-media {
