@@ -26,6 +26,7 @@ header {
 }
 header span {
   font-size: 50px;
+  font-weight: 400;
   font-family: "Courier New", Courier, monospace;
   color: orange;
 }
@@ -53,7 +54,7 @@ header nav ul li a {
 
 /* Hero Section */
 .hero {
-  background-image: url(hero.jpg);
+  background-image: url(hero.jpeg);
   color: white;
   height: 100vh;
   background-position: center center;
@@ -208,6 +209,12 @@ footer .social-media a {
   margin: 0 10px;
   text-decoration: none;
 }
+footer span {
+  font-size: 50px;
+  font-family: "Courier New", Courier, monospace;
+  color: orange;
+}
+
 
 /* Buttons General */
 button {
