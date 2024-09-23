@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hair & Oil Products</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
   </head>
+
   <body>
     <!-- Header Section -->
     <header>
@@ -15,7 +17,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#comments">What others say</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -28,35 +30,21 @@
       <button id="shopNowBtn">Shop Now</button>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-      <h2>About Us</h2>
-      <p>
-        We provide perfume oils and products that helps you smell good like
-        never before.Our oils are a formulation of raw materials like fragrance
-        oils, essential oils and other natural or synthetic ingredients. They
-        usually last longer and smell stronger than alcohol-based perfumes. They
-        can stain clear clothes and so there are different application methods
-        to suit your preference.
-        <a href="">want to know more click me</a>
-      </p>
-    </section>
-
     <!-- Products Section -->
     <section id="products" class="products">
       <h2>Our Products</h2>
       <div class="product-grid">
         <div class="product-card">
           <img src="images/product-1.jpg" alt="Hair Oil" />
-          <h3>Argan Oil</h3>
-          <p>For smooth and shiny hair</p>
+          <h3>fantacy</h3>
+          <p>Promotes hair growth</p>
           <button class="addToCartBtn" data-product="Argan Oil">
             Add to Cart
           </button>
         </div>
         <div class="product-card">
           <img src="images/product-2.jpg" alt="Hair Serum" />
-          <h3>Hair Growth Serum</h3>
+          <h3>mango armani code</h3>
           <p>Promotes hair growth</p>
           <button class="addToCartBtn" data-product="Hair Growth Serum">
             Add to Cart
@@ -64,7 +52,7 @@
         </div>
         <div class="product-card">
           <img src="images/product-3.jpg" alt="Hair Serum" />
-          <h3>Hair Growth Serum</h3>
+          <h3>gucci guilty men</h3>
           <p>Promotes hair growth</p>
           <button class="addToCartBtn" data-product="Hair Growth Serum">
             Add to Cart
@@ -72,7 +60,16 @@
         </div>
         <div class="product-card">
           <img src="images/product-4.jpg" alt="Hair Serum" />
-          <h3>Hair Growth Serum</h3>
+          <h3>baccer rouge</h3>
+          <p>Promotes hair growth</p>
+          <button class="addToCartBtn" data-product="Hair Growth Serum">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="images/product-5.jpg" alt="Hair Serum" />
+          <h3>barracat rouge</h3>
           <p>Promotes hair growth</p>
           <button class="addToCartBtn" data-product="Hair Growth Serum">
             Add to Cart
@@ -80,19 +77,13 @@
         </div>
         <div class="product-card">
           <img src="images/product-5.jpg" alt="Hair Serum" />
-          <h3>Hair Growth Serum</h3>
+          <h3>barracat rouge</h3>
           <p>Promotes hair growth</p>
           <button class="addToCartBtn" data-product="Hair Growth Serum">
             Add to Cart
           </button>
         </div>
-        <div class="product-card">
-          <img src="images/product-6.jpg" alt="Hair Serum" />
-          <h3>Hair Growth Serum</h3>
-          <p>Promotes hair growth</p>
-          <button class="addToCartBtn" data-product="Hair Growth Serum">
-            Add to Cart
-          </button>
+
         </div>
 
         <!-- Add more product cards as needed -->
@@ -106,12 +97,27 @@
       <button id="checkoutBtn">Checkout</button>
     </section>
 
-    <!-- Testimonials Section -->
-    <div class="comment-contact-container">
-      <section id="testimonials" class="testimonials">
-        <h2>What Our Customers Say</h2>
-        <p>"These oils transformed my hair!" - Sarah</p>
-        <p>"Love the natural ingredients!" - John</p>
+    <div class="comments-about-container">
+      <!-- About Section -->
+      <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+          We provide perfume oils and products that helps you smell good like
+          never before.Our oils are a formulation of raw materials like
+          fragrance oils,essential oils and other natural or synthetic
+          ingredients. They usually last longer and smell stronger than
+          alcohol-based perfumes. They can stain clear clothes and so there are
+          different application methods to suit your preference.<a href=""
+            >want to know more click me</a
+          >
+        </p>
+      </section>
+
+      <!-- comment Section -->
+      <section id="comments" class="comments">
+        <h2>Leave a Comment</h2>
+        <p>"It smells so good i really love it!" - Sarah</p>
+        <p>"It smells so great ingredients!" - John</p>
         <p id="appendComment"></p>
         <form id="contactForm">
           <input
@@ -131,7 +137,6 @@
           comment
         </button>
       </section>
-
       <!-- Contact Section -->
       <section id="contact" class="contact">
         <h2>Contact Us</h2>

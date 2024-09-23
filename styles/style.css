@@ -85,27 +85,26 @@ header nav ul li a {
   font-size: 1.2rem;
 }
 
-/* About, Products, Testimonials, Contact */
+/* About, Products, comments, Contact */
 .about,
 .products,
-.testimonials,
+.comments,
 .contact {
   padding: 50px;
   text-align: center;
 }
+.comments,
+.contact,
 .about {
-  width: 50%;
-  margin: auto;
-}
-.comment-contact-container {
-  display: grid;
-  grid-template-columns: auto/auto auto;
-  gap: 20px;
-}
-.testimonials,
-.contact {
+  overflow-y: hidden;
+  height: 350px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.comments {
+  overflow-y: scroll;
+}
+
 .contact #contactform,
 input,
 textarea {
@@ -118,9 +117,12 @@ textarea {
 /* Responsive Product Grid */
 .product-grid {
   display: flex;
+  width: 100%;
+  margin: auto;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 .products h2 {
   margin: 0.5rem;
@@ -132,17 +134,32 @@ textarea {
   width: 100%;
   max-width: 300px;
   text-align: center;
-  margin-bottom: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
+.product-card h3 {
+  font-size: 16px;
+  font-variant: small-caps;
+}
 
 .product-card img {
-  width: 100px;
+  width: 30px;
 }
 
 .product-card:hover {
   transform: scale(1.05);
+}
+
+.comments-about-container {
+  display: grid;
+  grid-template: auto/ auto auto auto;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /* Cart */
@@ -213,131 +230,4 @@ button:hover {
 ::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.618);
   width: 10px;
-}
-
-/* RESPONSIVENESS */
-
-/* Small Devices (Mobile) */
-@media (max-width: 768px) {
-  header h3 {
-    display: none;
-  }
-  header nav ul {
-    flex-direction: row;
-    margin-bottom: 10px;
-  }
-
-  header nav ul li {
-    display: inline;
-    padding: 0.5rem;
-    margin: 10px 0;
-  }
-  header nav ul li a {
-    font-size: 13px;
-    border-left: 1px soild orange;
-  }
-
-  .hero {
-    height: 20vh;
-  }
-
-  .hero h1 {
-    font-size: 1rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-  .hero button {
-    padding: 10px 15px;
-    font-size: 1rem;
-  }
-
-  .product-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product-card {
-    width: 80%;
-  }
-  .product-card img {
-    width: 100%;
-    height: 150px;
-  }
-
-  .about,
-  .products,
-  .testimonials,
-  .contact {
-    padding: 30px 10px;
-  }
-  .about {
-    width: 70%;
-  }
-  .comment-contact-container {
-    display: grid;
-    grid-template-columns: auto/auto auto;
-    gap: 20px;
-  }
-
-  footer .social-media {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
-
-/* Medium Devices (Tablets) */
-@media (max-width: 1024px) {
-  header h3,
-  span {
-    font-size: 12px;
-  }
-
-  .hero {
-    height: 50vh;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .product-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .product-card {
-    width: 45%;
-    max-width: 300px;
-  }
-  .product-card img {
-    width: 100%;
-  }
-  .comment-contact-container {
-    display: grid;
-    grid-template-columns: auto/auto auto;
-  }
-}
-
-/* Large Devices (Desktops) */
-@media (min-width: 1025px) {
-  .hero h1 {
-    font-size: 4rem;
-  }
-
-  .product-grid {
-    justify-content: space-between;
-  }
-
-  .product-card {
-    width: 30%;
-    max-width: 350px;
-  }
-  .product-card img {
-    width: 100%;
-    height: 200px;
-  }
 }
