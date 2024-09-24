@@ -54,6 +54,16 @@
   .contact {
     padding: 30px 10px;
   }
+
+  .contact #contactform,
+  input,
+  textarea {
+    width: 90%;
+    resize: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
   .comments {
     overflow-y: scroll;
   }
@@ -99,6 +109,14 @@
   .comments-about-container {
     display: grid;
     grid-template: auto auto auto/ auto;
+  }
+  .contact #contactform,
+  input,
+  textarea {
+    width: 90%;
+    resize: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
   }
 }
 
