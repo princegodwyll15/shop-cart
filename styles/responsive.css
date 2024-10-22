@@ -16,7 +16,7 @@
     margin: 10px 0;
   }
   header nav ul li a {
-    font-size: 13px;
+    font-size: 15px;
     border-left: 1px soild orange;
   }
 
@@ -35,6 +35,11 @@
   .hero button {
     padding: 10px 15px;
     font-size: 1rem;
+  }
+
+  .product-grid{
+    width: 97%;
+    margin: 3%;
   }
 
   .product-card {
@@ -94,6 +99,7 @@
   }
 
   .product-grid {
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
