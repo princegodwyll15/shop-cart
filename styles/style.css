@@ -142,6 +142,20 @@ nav ul li a {
   background: #218838;
 }
 
+.user-comment {
+  margin: 5px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.success-message {
+  color: #28a745;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
 .contact {
   padding: 20px;
   background: #f9f9f9;

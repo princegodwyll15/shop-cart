@@ -66,9 +66,10 @@ function checkout() {
   cart = [];
   updateCart();
 }
-
 // Event listener for the checkout button
 document.getElementById('checkout-btn').addEventListener('click', checkout);
+
+
 
 
 
@@ -87,3 +88,44 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   // Clear the form fields
   document.getElementById('contact-form').reset();
 });
+
+
+// Function to handle comment submission
+function handleCommentSubmit(event) {
+  event.preventDefault(); // Prevent form submission
+
+  const userName = document.getElementById('userName').value.trim();
+  const userComment = document.getElementById('comment').value.trim();
+
+  // Simple validation
+  if (!userName || !userComment) {
+      alert("Please fill in both fields.");
+      return;
+  }
+
+  // Create a new comment element
+  const newComment = document.createElement('p');
+  newComment.textContent = `"${userComment}" - ${userName}`;
+  newComment.className = 'user-comment'; // Optional: add a class for styling
+
+  // Append the new comment to the comment list
+  document.getElementById('comment-list').appendChild(newComment);
+
+  // Clear the input fields
+  document.getElementById('userName').value = '';
+  document.getElementById('comment').value = '';
+
+  // Display a success message (optional)
+  const responseMessage = document.createElement('p');
+  responseMessage.textContent = "Your comment has been submitted!";
+  responseMessage.className = 'success-message';
+  document.getElementById('form-response').appendChild(responseMessage);
+
+  // Remove the success message after a few seconds
+  setTimeout(() => {
+      responseMessage.remove();
+  }, 3000);
+}
+
+// Add event listener to the comment form
+document.getElementById('comment-form').addEventListener('submit', handleCommentSubmit);
