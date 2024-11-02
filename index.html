@@ -1,178 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mama Gees Fragrance</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/responsive.css" />
     <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/fontawesome.min.css">
-  </head>
-
-  <body>
-    <!-- Header Section -->
-    <header>
-      <h3>Miss Gee <span>MG</span>Unique Frangrace</h3>
-      <nav>
+</head>
+<body>
+<header>
+    <h3>Miss Gee <span>MG</span> Unique Fragrance</h3>
+    <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#comments">What others say</a></li>
-          <li><a href="#contact">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#comments">What others say</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
-    </header>
+    </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <h1>Natural Sweet Scentered Perfumes</h1>
-      <p>Discover the benefits of smelling nice.</p>
-      <button id="shopNowBtn">Shop Now</button>
-    </section>
+<main>
+<section id="home" class="hero">
+    <h1>Natural Sweet Scentered Perfumes</h1>
+    <p>Discover the benefits of smelling nice.</p>
+    <button id="shopNowBtn">Shop Now</button>
+</section>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
-      <h2>Our Products</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="images/product-1.jpg" alt="Hair Oil" />
-          <h3>fantacy</h3>
-          <p><span>Size Range: 50ml only</span></p>
-          <p><span>Price: $350.00</span></p>
-          <button class="addToCartBtn" data-product="Argan Oil">
-            Add to Cart
-          </button>
-        </div>
-        <div class="product-card">
-          <img src="images/product-2.jpg" alt="Hair Serum" />
-          <h3>mango armani</h3>
-          <p><span>Size Range: 50ml only</span></p>
-          <p><span>Price: $350.00</span></p>
-          <button class="addToCartBtn" data-product="Hair Growth Serum">
-            Add to Cart
-          </button>
-        </div>
-        <div class="product-card">
-          <img src="images/product-3.jpg" alt="Hair Serum" />
-          <h3>guilty men</h3>
-          <p><span>Size Range: 50ml only</span></p>
-          <p><span>Price: $350.00</span></p>
-          <button class="addToCartBtn" data-product="Hair Growth Serum">
-            Add to Cart
-          </button>
-        </div>
-        <div class="product-card">
-          <img src="images/product-4.jpg" alt="Hair Serum" />
-          <h3>baccer rouge</h3>
-          <p><span>Size Range: 50ml only</span></p>
-          <p><span>Price: $350.00</span></p>
-          <button class="addToCartBtn" data-product="Hair Growth Serum">
-            Add to Cart
-          </button>
-        </div>
-
-        <div class="product-card">
-          <img src="images/product-5.jpg" alt="Hair Serum" />
-          <h3>barracat rouge</h3>
-          <p><span>Size Range: 50ml only</span></p>
-          <p><span>Price: $350.00</span></p>
-          <button class="addToCartBtn" data-product="Hair Growth Serum">
-            Add to Cart
-          </button>
-        </div>
-        <div class="product-card">
-          <img src="images/product-5.jpg" alt="Hair Serum" />
-          <h3>barracat rouge</h3>
-          <p><span>Size Range: 50ml only</span></p>
-          <p><span>Price: $350.00</span></p>
-          <button class="addToCartBtn" data-product="Hair Growth Serum">
-            Add to Cart
-          </button>
-        </div>
-
-        </div>
-
-        <!-- Add more product cards as needed -->
-      </div>
-    </section>
-
-    <!-- Cart Section (hidden until items are added) -->
-    <section id="cart" class="cart" style="display: none">
-      <h2>Your Cart</h2>
-      <ul id="cartItems"></ul>
-      <button id="checkoutBtn">Checkout</button>
-    </section>
-
-    <div class="comments-about-container">
-      <!-- About Section -->
-      <section id="about" class="about">
-        <p>
-          We provide perfume oils and products that helps you smell good like
-          never before.Our oils are a formulation of raw materials like
-          fragrance oils,essential oils and other natural or synthetic
-          ingredients. They usually last longer and smell stronger than
-          alcohol-based perfumes. They can stain clear clothes and so there are
-          different application methods to suit your preference.<a href=""
-            >want to know more click me</a
-          >
-        </p>
-      </section>
-
-      <!-- comment Section -->
-      <section id="comments" class="comments">
-        <p>"It smells so good i really love it!" - Sarah</p>
-        <p>"It smells so great ingredients!" - John</p>
-        <p id="appendComment"></p>
-        <form id="contactForm">
-          <input
-            type="text"
-            placeholder="your name here please"
-            id="userName"
-            required
-          /><br />
-          <input
-            type="text"
-            placeholder="leave a comment"
-            id="comment"
-            required
-          /><br />
-        </form>
-        <button type="submit" id="Sendmessage" onclick="messageSent()">
-          comment
-        </button>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact">
-        <form id="contactForm">
-          <input type="text" placeholder="Your Name" id="name" required /><br />
-          <input
-            type="email"
-            placeholder="Your Email"
-            id="email"
-            required
-            /><br />
-            <textarea placeholder="Your Message" id="message" required></textarea
-            ><br />
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
+<section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+        <!-- Product cards will be generated dynamically -->
     </div>
+    <aside class="shopping-cart">
+        <h3>Shopping Cart</h3>
+        <ul id="cart-list"></ul>
+        <p id="total-price"></p>
+        <button id="checkout-btn">Checkout</button>
+    </aside>
+</section>
 
-    <!-- Footer Section -->
-    <footer>
-      <p>&copy; 2024 Miss Gee <span>MG</span>Unique Frangrace</p>
-      <div class="social-media">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      </div>
-    </footer>
+<section id="about" class="about">
+    <p>We provide perfume oils and products that help you smell good like never before.</p>
+</section>
 
-    <script src="scripts/scripts.js"></script>
-  </body>
+<section id="comments" class="comments">
+    <p>"It smells so good I really love it!" - Sarah</p>
+    <p>"It smells so great with quality ingredients!" - John</p>
+    <form id="comment-form">
+        <input type="text" placeholder="Your Name" id="userName" required />
+        <br />
+        <input type="text" placeholder="Leave a comment" id="comment" required />
+        <br />
+        <button type="submit" id="send-comment-btn">Comment</button>
+    </form>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>We'd love to hear from you! Please fill out the form below:</p>
+  <form id="contact-form">
+      <input type="text" placeholder="Your Name" id="name" required />
+      <br />
+      <input type="email" placeholder="Your Email" id="email" required />
+      <br />
+      <textarea placeholder="Your Message" id="message" required></textarea>
+      <br />
+      <button type="submit">Send Message</button>
+  </form>
+  <div id="form-response"></div>
+</section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-nav">
+            <h3>Explore</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#comments">What Others Say</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <p>&copy; 2024 Miss Gee <span>MG</span> Unique Fragrance. All rights reserved.</p>
+</footer>
+
+<script src="scripts/scripts.js" defer="defer"></script>
+</body>
 </html>

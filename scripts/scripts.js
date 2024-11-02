@@ -1,85 +1,89 @@
-// Scroll to Products when 'Shop Now' button is clicked
-document.getElementById("shopNowBtn").addEventListener("click", function () {
-  document.getElementById("products").scrollIntoView({
-    behavior: "smooth",
-  });
-});
+const products = [
+  { id: 1, name: "Rose Perfume", price: 29.99, description: "A sweet and floral scent." },
+  { id: 2, name: "Lavender Oil", price: 19.99, description: "Calming and soothing." },
+  { id: 3, name: "Citrus Splash", price: 24.99, description: "A refreshing burst of citrus." },
+  { id: 4, name: "Vanilla Essence", price: 22.99, description: "Warm and comforting." },
+];
 
-// Handle Add to Cart functionality
 let cart = [];
 
-document.querySelectorAll(".addToCartBtn").forEach((button) => {
-  button.addEventListener("click", function () {
-    let product = this.getAttribute("data-product");
-    addToCart(product);
+// Function to display products
+function displayProducts() {
+  const productGrid = document.querySelector('.product-grid');
+  products.forEach(product => {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.innerHTML = `
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+          <p>$${product.price.toFixed(2)}</p>
+          <button onclick="addToCart(${product.id})">Add to Cart</button>
+      `;
+      productGrid.appendChild(card);
   });
-});
+}
 
-function addToCart(product) {
+// Function to add item to cart
+function addToCart(productId) {
+  const product = products.find(p => p.id === productId);
   cart.push(product);
-  updateCartDisplay();
+  updateCart();
 }
 
-function updateCartDisplay() {
-  const cartSection = document.getElementById("cart");
-  const cartItems = document.getElementById("cartItems");
+// Function to update the shopping cart display
+function updateCart() {
+  const cartList = document.getElementById('cart-list');
+  const totalPriceElement = document.getElementById('total-price');
+  cartList.innerHTML = '';
+  let totalPrice = 0;
 
-  // Clear the current cart display
-  cartItems.innerHTML = "";
-
-  // Display the new cart items
-  cart.forEach((item, index) => {
-    let li = document.createElement("li");
-    li.textContent = item;
-    cartItems.appendChild(li);
+  cart.forEach(item => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+      cartList.appendChild(listItem);
+      totalPrice += item.price;
   });
 
-  // Show the cart section if it was hidden
-  if (cart.length > 0) {
-    cartSection.style.display = "block";
-  }
+  totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
 }
 
-// Checkout button functionality
-document.getElementById("checkoutBtn").addEventListener("click", function () {
-  alert("Proceeding to checkout with items: " + cart.join(", "));
-  // Clear the cart
+// Initialize the product display
+displayProducts();
+
+
+// Function to handle checkout
+function checkout() {
+  if (cart.length === 0) {
+      alert("Your cart is empty!");
+      return;
+  }
+  
+  let cartItems = cart.map(item => `${item.name} - $${item.price.toFixed(2)}`).join('\n');
+  let totalPrice = cart.reduce((total, item) => total + item.price, 0).toFixed(2);
+  alert(`Thank you for your purchase!\n\nItems:\n${cartItems}\n\nTotal: $${totalPrice}`);
+  
+  // Clear the cart after checkout
   cart = [];
-  updateCartDisplay();
-  document.getElementById("cart").style.display = "none";
-});
+  updateCart();
+}
 
-getSelector = document.querySelectorAll("a");
-getSelector[0].classList.add("active");
+// Event listener for the checkout button
+document.getElementById('checkout-btn').addEventListener('click', checkout);
 
-getSelector.forEach((selector) => {
-  selector.addEventListener("click", () => {
-    getSelector.forEach((otherSelector) =>
-      otherSelector.classList.remove("active")
-    );
-    selector.classList.add("active");
-  });
-});
 
-// Get input elements
-const userNameInput = document.getElementById("userName");
-const commentInput = document.getElementById("comment");
-const createCommentElement = document.getElementById("appendComment");
-const sendMessageButton = document.getElementById("Sendmessage");
 
-// Add event listener to send message button
-sendMessageButton.addEventListener("click", () => {
-  const userName = userNameInput.value.trim();
-  const comment = commentInput.value.trim();
+// Function to handle contact form submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting the default way
 
-  // Validate input
-  if (userName && comment) {
-    // Append comment to paragraph
-    createCommentElement.innerHTML += `${comment} - ${userName}<br>`;
-    // Clear input fields
-    userNameInput.value = "";
-    commentInput.value = "";
-  } else {
-    alert("Please enter both username and comment.");
-  }
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  // Display a confirmation message (in a real application, you would send this data to a server)
+  const responseMessage = `Thank you, ${name}! Your message has been received. We'll get back to you at ${email} shortly.`;
+  document.getElementById('form-response').textContent = responseMessage;
+
+  // Clear the form fields
+  document.getElementById('contact-form').reset();
 });
