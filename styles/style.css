@@ -6,27 +6,28 @@ body {
 }
 
 header {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  align-items: center;
   background: #333;
   color: #fff;
-  padding: 10px 0;
+}
+header h1{
+  padding: 10px;
 }
 
-header h3 {
-  text-align: center;
-}
-
-nav ul {
+.navigation{
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
   padding: 0;
 }
 
-nav ul li {
+.navigation a {
   margin: 0 15px;
-}
-
-nav ul li a {
   color: #fff;
   text-decoration: none;
 }
@@ -36,6 +37,27 @@ nav ul li a {
   background: #f4f4f4;
   padding: 50px 20px;
 }
+
+#checkout-btn, .hero button{
+  padding: 1rem;
+  transition: background ease .3s;
+  outline: none;
+  border: none;
+  background-color: #ccc;
+}
+
+.hero button:hover{
+  cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+}
+
+#checkout-btn:hover{
+  cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+}
+
 
 .products {
   padding: 20px;
