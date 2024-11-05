@@ -5,13 +5,6 @@ const products = [
     price: 29.99, description: "A sweet and floral scent.",
     itemImg: 'C:\Users\godwy\Documents\Github\shop-cart\images\product (1).jpg'
   },
-  { 
-    id: 2,
-    name: "Lavender Oil", 
-    price: 19.99, 
-    description: "Calming and soothing." ,
-    itemImg: "images\product(1).jpg"
-  },
   { id: 3,
     name: "Citrus Splash", 
     price: 24.99, 
@@ -56,28 +49,7 @@ const products = [
     price: 29.99,
     description: "A sweet and floral scent.",
     itemImg: "images\product(1).jpg"
-  },
-  { 
-    id: 2,
-    name: "Lavender Oil", 
-    price: 19.99, 
-    description: "Calming and soothing.",
-    itemImg: "images\product(1).jpg" 
-  },
-  { id: 3,
-    name: "Citrus Splash", 
-    price: 24.99, 
-    description: "A refreshing burst of citrus.",
-    itemImg: "images\product(1).jpg"
-   },
-  { 
-    id: 4,
-    name: "Vanilla Essence", 
-    price: 22.99, 
-    description: "Warm and comforting.",
-    itemImg: "images\product(1).jpg"
-  },
-
+  }
 ];
 let cart = [];
 
