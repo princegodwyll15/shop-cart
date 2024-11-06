@@ -77,7 +77,7 @@ function displayProducts() {
     //about product
     const aboutProduct = document.createElement('p');
     aboutProduct.innerHTML = `${product.description} <br>
-    Price: ${product.price.toFixed(2)}`;
+    Price ₵: ${product.price.toFixed(2)}`;
 
     //add to cart button
     const addToCart = document.createElement('button');
