@@ -12,7 +12,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background: orangered;
-  color: #000;
+  color: #fff;
 }
 header h1{
   padding: 10px;
@@ -29,7 +29,7 @@ header h1{
 .navigation a {
   font-size: 20px;
   margin: 0 15px;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -49,18 +49,18 @@ header h1{
   transition: background ease .3s;
   outline: none;
   border: none;
-  background-color: #c46af8;
+  background-color: orangered;
 }
 
 .hero button:hover{
   cursor: pointer;
-  background-color: #c46af8;
+  background-color: orangered;
   color: #fff;
 }
 
 #checkout-btn:hover{
   cursor: pointer;
-  background-color: #c46af8;
+  background-color: orangered;
   color: #fff;
 }
 
@@ -102,7 +102,7 @@ header h1{
 }
 
 .product-card button {
-  background: #c46af8;
+  background: orangered;
   color: white;
   border: none;
   padding: 10px;
@@ -111,7 +111,7 @@ header h1{
 }
 
 .product-card button:hover {
-  background: #c46af8;
+  background: orangered;
 }
 
 .shopping-cart {
@@ -165,7 +165,7 @@ header h1{
 
 .comments button {
   padding: 10px 15px;
-  background: #c46af8;
+  background: orangered;
   color: white;
   border: none;
   border-radius: 5px;
@@ -173,7 +173,7 @@ header h1{
 }
 
 .comments button:hover {
-  background: #c46af8;
+  background: orangered;
 }
 
 .user-comment {
@@ -183,7 +183,7 @@ header h1{
 }
 
 .success-message {
-  color: #c46af8;
+  color: orangered;
   text-align: center;
   margin-top: 10px;
   font-weight: bold;
@@ -226,7 +226,7 @@ header h1{
 
 .contact button {
   padding: 10px 15px;
-  background: #c46af8;
+  background: orangered;
   color: white;
   border: none;
   border-radius: 5px;
@@ -234,14 +234,14 @@ header h1{
 }
 
 .contact button:hover {
-  background: #c46af8;
+  background: orangered;
 }
 
 #form-response {
   margin-top: 15px;
   text-align: center;
   font-weight: bold;
-  color: #c46af8;
+  color: orangered;
 }
 
 
