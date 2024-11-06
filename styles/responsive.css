@@ -1,6 +1,7 @@
 @media screen and (max-width: 768px) {
 /* hamburger */
 #menu.open::before {
+  cursor: pointer;
     content: "X";
   }
 
@@ -8,6 +9,7 @@
     font-size: 25px;
     padding: 10px;
     text-align: center;
+    cursor: pointer;
     content: "☰";
   }
   .navigation a{

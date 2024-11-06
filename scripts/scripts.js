@@ -16,7 +16,7 @@ const products = [
     id: 3,
     name: "Vanilla Essence", 
     price: 22.99, description: "Warm and comforting.",
-    itemImg: 'images/product (3).jpg'
+    itemImg: 'images/product (4).jpg'
   },
   { 
     id: 4,
@@ -77,7 +77,7 @@ function displayProducts() {
     //about product
     const aboutProduct = document.createElement('p');
     aboutProduct.innerHTML = `${product.description} <br>
-    <strong>Price: ${product.price.toFixed(2)}</strong>`;
+    Price:${product.price.toFixed(2)}`;
 
     //add to cart button
     const addToCart = document.createElement('button');
