@@ -11,8 +11,8 @@ header {
   grid-template-rows: auto;
   justify-content: space-between;
   align-items: center;
-  background: #333;
-  color: #fff;
+  background: orangered;
+  color: #000;
 }
 header h1{
   padding: 10px;
@@ -27,14 +27,20 @@ header h1{
 }
 
 .navigation a {
+  font-size: 20px;
   margin: 0 15px;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
   text-align: center;
-  background: #f4f4f4;
+  background: #ddd;
   padding: 50px 20px;
 }
 
@@ -43,18 +49,18 @@ header h1{
   transition: background ease .3s;
   outline: none;
   border: none;
-  background-color: #ccc;
+  background-color: #c46af8;
 }
 
 .hero button:hover{
   cursor: pointer;
-  background-color: #28a745;
+  background-color: #c46af8;
   color: #fff;
 }
 
 #checkout-btn:hover{
   cursor: pointer;
-  background-color: #28a745;
+  background-color: #c46af8;
   color: #fff;
 }
 
@@ -65,16 +71,22 @@ header h1{
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
 }
 
 .product-card {
+  cursor: pointer;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
   transition: transform 0.2s;
+}
+
+.product-card img{
+  width: 100%;
+  height: 200px;
 }
 
 .product-card:hover {
@@ -90,7 +102,7 @@ header h1{
 }
 
 .product-card button {
-  background: #28a745;
+  background: #c46af8;
   color: white;
   border: none;
   padding: 10px;
@@ -99,7 +111,7 @@ header h1{
 }
 
 .product-card button:hover {
-  background: #218838;
+  background: #c46af8;
 }
 
 .shopping-cart {
@@ -153,7 +165,7 @@ header h1{
 
 .comments button {
   padding: 10px 15px;
-  background: #28a745;
+  background: #c46af8;
   color: white;
   border: none;
   border-radius: 5px;
@@ -161,7 +173,7 @@ header h1{
 }
 
 .comments button:hover {
-  background: #218838;
+  background: #c46af8;
 }
 
 .user-comment {
@@ -171,7 +183,7 @@ header h1{
 }
 
 .success-message {
-  color: #28a745;
+  color: #c46af8;
   text-align: center;
   margin-top: 10px;
   font-weight: bold;
@@ -214,7 +226,7 @@ header h1{
 
 .contact button {
   padding: 10px 15px;
-  background: #28a745;
+  background: #c46af8;
   color: white;
   border: none;
   border-radius: 5px;
@@ -222,22 +234,22 @@ header h1{
 }
 
 .contact button:hover {
-  background: #218838;
+  background: #c46af8;
 }
 
 #form-response {
   margin-top: 15px;
   text-align: center;
   font-weight: bold;
-  color: #28a745;
+  color: #c46af8;
 }
 
 
 
 
 footer {
-  background: #333;
-  color: #fff;
+  background: #c46af8;
+  color: #000;
   padding: 20px 0;
   text-align: center;
 }
@@ -263,24 +275,24 @@ footer {
 }
 
 .footer-nav a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-nav a:hover {
-  color: #28a745;
+  color: #c46af8;
 }
 
 .social-media a {
   margin: 0 10px;
-  color: #fff;
+  color: #000;
   font-size: 20px;
   transition: color 0.3s;
 }
 
 .social-media a:hover {
-  color: #28a745;
+  color: #fff;
 }
 
 footer p {

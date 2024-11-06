@@ -2,53 +2,55 @@ const products = [
   { 
     id: 1,
     name: "Rose Perfume",
-    price: 29.99, description: "A sweet and floral scent.",
-    itemImg: 'C:\Users\godwy\Documents\Github\shop-cart\images\product (1).jpg'
+    price: 29.99,
+    description: "A sweet and floral scent.",
+    itemImg: 'images/product (1).jpg'
   },
-  { id: 3,
+  { id: 2,
     name: "Citrus Splash", 
     price: 24.99, 
     description: "A refreshing burst of citrus.",
-    itemImg: "images\product(1).jpg"
+    itemImg: 'images/product (2).jpg'
    },
   { 
-    id: 4,
+    id: 3,
     name: "Vanilla Essence", 
     price: 22.99, description: "Warm and comforting.",
-    itemImg: "images\product(1).jpg"
+    itemImg: 'images/product (3).jpg'
   },
-  { 
-    id: 1,
-    name: "Rose Perfume",
-    price: 29.99, description: "A sweet and floral scent.",
-    itemImg: "images\product(1).jpg"
-  },
-  { 
-    id: 2,
-    name: "Lavender Oil", 
-    price: 19.99, 
-    description: "Calming and soothing.",
-    itemImg: "images\product(1).jpg"
-  },
-  { id: 3,
-    name: "Citrus Splash", 
-    price: 24.99, 
-    description: "A refreshing burst of citrus.",
-    itemImg: "images\product(1).jpg"
-   },
   { 
     id: 4,
-    name: "Vanilla Essence", 
-    price: 22.99, 
-    description: "Warm and comforting.",
-    itemImg: "images\product(1).jpg"
-  },
-  { 
-    id: 1,
     name: "Rose Perfume",
     price: 29.99,
     description: "A sweet and floral scent.",
-    itemImg: "images\product(1).jpg"
+    itemImg: 'images/product (4).jpg'
+  },
+  { 
+    id: 5,
+    name: "Lavender Oil", 
+    price: 19.99, 
+    description: "Calming and soothing.",
+    itemImg: 'images/product (5).jpg'
+  },
+  { id: 6,
+    name: "Citrus Splash", 
+    price: 24.99, 
+    description: "A refreshing burst of citrus.",
+    itemImg: 'images/product (6).jpg'
+   },
+  { 
+    id: 7,
+    name: "Vanilla Essence", 
+    price: 22.99, 
+    description: "Warm and comforting.",
+    itemImg: 'images/product (7).jpg'
+  },
+  { 
+    id: 8,
+    name: "Rose Perfume",
+    price: 29.99,
+    description: "A sweet and floral scent.",
+    itemImg: 'images/product (8).jpg'
   }
 ];
 let cart = [];
@@ -57,23 +59,37 @@ let cart = [];
 function displayProducts() {
   const productGrid = document.querySelector('.product-grid');
   products.forEach(product => {
-    const card = document.createElement('div');
-    const createImg = document.createElement('img');
-    createImg.src= product.itemImg;
-    createImg.loading="lazy";
-    createImg.style.width='100%';
-    
+    //create a card element to be appended to the product grdi container
+    const card = document.createElement('div');  
     card.className = 'product-card';
-    card.appendChild(createImg);
 
-    card.innerHTML = `
-          <h3>${product.name}</h3>
-          <p>${product.description}</p>
-          <p>$${product.price.toFixed(2)}</p>
-          <button onclick="addToCart(${product.id})">Add to Cart</button>
-      `;
-    productGrid.appendChild(card);
-  });
+    //create an img element to be appended to the card container
+    const creatImg = document.createElement('img');
+    creatImg.src = product.itemImg;
+    creatImg.alt = "product Image";
+    creatImg.loading = 'lazy';
+
+    //create a header elemnt to append to the card container
+    const productName= document.createElement('h3');
+    //get neccessary information
+    productName.textContent = product.name;
+
+    //about product
+    const aboutProduct = document.createElement('p');
+    aboutProduct.innerHTML = `${product.description} <br>
+    <strong>Price: ${product.price.toFixed(2)}</strong>`;
+
+    //add to cart button
+    const addToCart = document.createElement('button');
+    addToCart.textContent = `Add to cart`;
+
+      productGrid.appendChild(card); 
+      card.appendChild(creatImg);
+      card.appendChild(productName);
+      card.appendChild(aboutProduct);
+      card.appendChild(addToCart);
+    
+    });
 }
 
 // Function to add item to cart
