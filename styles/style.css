@@ -10,6 +10,9 @@ body {
 }
 
 header {
+  z-index: 5;
+  position: fixed;
+  width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto;
@@ -47,30 +50,49 @@ header h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height:100vh;
   text-align: center;
-  background: #ddd;
   padding: 50px 20px;
 }
 
-#checkout-btn, .hero button{
+.hero h1,p{
+  color: #fff;
+}
+
+.hero h1{
+  font-size: 30px;
+}
+
+.hero p{
+  font-size: 20px;
+}
+
+#checkout-btn{
   padding: 1rem;
+  font-size: 18px;
   transition: background ease .3s;
   outline: none;
   border: none;
-  background-color: orangered;
 }
+.hero button{
+  padding: 1rem;
+  font-size: 18px;
+  transition: background ease .3s;
+  outline: none;
+  border: none;
+  background-color: #fff;
+}
+
 
 .hero button:hover{
   cursor: pointer;
-  background-color: orangered;
-  color: #fff;
+  background-color: #fff;
+  color: var(--primary-color);
 }
 
 #checkout-btn:hover{
   cursor: pointer;
-  background-color: orangered;
-  color: #fff;
+  background-color: red;
 }
 
 
@@ -113,8 +135,9 @@ header h1{
 .product-card button {
   background: var(--primary-color);
   color: white;
+  font-size: 15px;
   border: none;
-  padding: 10px;
+  padding: 1rem;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -140,8 +163,13 @@ header h1{
 .about, .comments {
   padding: 20px;
   background: #f9f9f9;
+  color: #000;
   margin: 20px 0;
   border-radius: 5px;
+}
+
+.about p{
+  color: #000;
 }
 
 .about h2, .comments h2 {
@@ -164,10 +192,10 @@ header h1{
 }
 
 .comments input[type="text"] {
+  max-width: 800px;
   margin-bottom: 10px;
   padding: 8px;
-  width: 80%;
-  max-width: 400px;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -201,7 +229,7 @@ header h1{
 
 .contact {
   padding: 20px;
-  background: #ccc;
+  background: #f9f9f9;;
   border-radius: 5px;
   margin: 20px 0;
 }
@@ -226,16 +254,20 @@ header h1{
 .contact input[type="email"],
 .contact textarea {
   margin-bottom: 10px;
+  resize: none;
   padding: 10px;
-  width: 80%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 800px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+input:focus{
+  border: var(--primary-color);
 }
 
 .contact button {
   padding: 10px 15px;
-  background: orangered;
+  background: var(--primary-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -243,21 +275,22 @@ header h1{
 }
 
 .contact button:hover {
-  background: orangered;
+  background: var(--primary-color);
 }
 
 #form-response {
   margin-top: 15px;
   text-align: center;
   font-weight: bold;
-  color: orangered;
+  color: var(--primary-color);
 }
 
 
 
 
 footer {
-  background: orangered;
+  background: var(--primary-color);
+  font-size: 20px;
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -300,9 +333,17 @@ footer {
   transition: color 0.3s;
 }
 
-.social-media a:hover {
-  color: #fff;
+
+.social-media i{
+  padding: .5rem;
 }
+
+.social-media i:hover{
+  background-color: #fff;
+  color: darkorchid;
+  border-radius: 50%;
+}
+
 
 footer p {
   margin: 0;
