@@ -248,8 +248,8 @@ header h1{
 
 
 footer {
-  background: #c46af8;
-  color: #000;
+  background: orangered;
+  color: #fff;
   padding: 20px 0;
   text-align: center;
 }
@@ -275,18 +275,18 @@ footer {
 }
 
 .footer-nav a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-nav a:hover {
-  color: #c46af8;
+  color: orangered;
 }
 
 .social-media a {
   margin: 0 10px;
-  color: #000;
+  color: #fff;
   font-size: 20px;
   transition: color 0.3s;
 }
