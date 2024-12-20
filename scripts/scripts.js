@@ -53,154 +53,128 @@ const products = [
     itemImg: 'images/product (8).jpg'
   }
 ];
-let cart = [];
 
+// Define global variables
+let cart = [];
 // Function to display products
 function displayProducts() {
   const productGrid = document.querySelector('.product-grid');
   products.forEach(product => {
-    //create a card element to be appended to the product grdi container
-    const card = document.createElement('div');  
-    card.className = 'product-card';
+      const card = document.createElement('div');
+      card.className = 'product-card';
 
-    //create an img element to be appended to the card container
-    const creatImg = document.createElement('img');
-    creatImg.src = product.itemImg;
-    creatImg.alt = "product Image";
-    creatImg.loading = 'lazy';
+      const creatImg = document.createElement('img');
+      creatImg.src = product.itemImg;
+      creatImg.alt = "Product Image";
 
-    //create a header elemnt to append to the card container
-    const productName= document.createElement('h3');
-    //get neccessary information
-    productName.textContent = product.name;
+      const productName = document.createElement('h3');
+      productName.textContent = product.name;
 
-    //about product
-    const aboutProduct = document.createElement('p');
-    aboutProduct.innerHTML = `${product.description} <br>
-    Price ₵: ${product.price.toFixed(2)}`;
+      const aboutProduct = document.createElement('p');
+      aboutProduct.innerHTML = `${product.description}<br>Price: $${product.price.toFixed(2)}`;
 
-    //add to cart button
-    const addToCart = document.createElement('button');
-    addToCart.textContent = `Add to cart`;
+      const addToCartButton = document.createElement('button');
+      addToCartButton.textContent = 'Add to Cart';
+      addToCartButton.addEventListener('click', () => addToCart(product.id));
 
-      productGrid.appendChild(card); 
       card.appendChild(creatImg);
       card.appendChild(productName);
       card.appendChild(aboutProduct);
-      card.appendChild(addToCart);
-    
-    });
+      card.appendChild(addToCartButton);
+      productGrid.appendChild(card);
+  });
 }
 
-// Function to add item to cart
+// Function to add an item to the cart
 function addToCart(productId) {
   const product = products.find(p => p.id === productId);
+
+  if (cart.some(item => item.id === productId)) {
+      alert("This item is already in your cart.");
+      return;
+  }
+
   cart.push(product);
   updateCart();
 }
 
-// Function to update the shopping cart display
+// Function to update the cart display
 function updateCart() {
   const cartList = document.getElementById('cart-list');
   const totalPriceElement = document.getElementById('total-price');
+
   cartList.innerHTML = '';
   let totalPrice = 0;
 
   cart.forEach(item => {
-    const listItem = document.createElement('li');
-    listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
-    cartList.appendChild(listItem);
-    totalPrice += item.price;
+      const listItem = document.createElement('li');
+      listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+      cartList.appendChild(listItem);
+      totalPrice += item.price;
   });
 
   totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
 }
 
-// Initialize the product display
-displayProducts();
-
-
 // Function to handle checkout
 function checkout() {
   if (cart.length === 0) {
-    alert("Your cart is empty!");
-    return;
+      alert("Your cart is empty!");
+      return;
   }
 
-  let cartItems = cart.map(item => `${item.name} - $${item.price.toFixed(2)}`).join('\n');
-  let totalPrice = cart.reduce((total, item) => total + item.price, 0).toFixed(2);
+  const cartItems = cart.map(item => `${item.name} - $${item.price.toFixed(2)}`).join('\n');
+  const totalPrice = cart.reduce((total, item) => total + item.price, 0).toFixed(2);
   alert(`Thank you for your purchase!\n\nItems:\n${cartItems}\n\nTotal: $${totalPrice}`);
 
-  // Clear the cart after checkout
   cart = [];
   updateCart();
 }
-// Event listener for the checkout button
-document.getElementById('checkout-btn').addEventListener('click', checkout);
 
-
-// Function to handle contact form submission
+// Contact form submission
 document.getElementById('contact-form').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent the form from submitting the default way
+  event.preventDefault();
 
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
-  // Display a confirmation message (in a real application, you would send this data to a server)
-  const responseMessage = `Thank you, ${name}! Your message has been received. We'll get back to you at ${email} shortly.`;
-  document.getElementById('form-response').textContent = responseMessage;
-
-  // Clear the form fields
+  document.getElementById('form-response').textContent = `Thank you, ${name}! Your message has been received. We'll get back to you at ${email}.`;
   document.getElementById('contact-form').reset();
 });
 
-
-// Function to handle comment submission
-function handleCommentSubmit(event) {
-  event.preventDefault(); // Prevent form submission
+// Comment submission
+document.getElementById('comment-form').addEventListener('submit', function (event) {
+  event.preventDefault();
 
   const userName = document.getElementById('userName').value.trim();
   const userComment = document.getElementById('comment').value.trim();
-
-  // Simple validation
   if (!userName || !userComment) {
-    alert("Please fill in both fields.");
-    return;
+      alert("Please fill in both fields.");
+      return;
   }
 
-  // Create a new comment element
+  const noComments = document.getElementById('no-comments');
+  if (noComments) noComments.remove();
+
   const newComment = document.createElement('p');
   newComment.textContent = `"${userComment}" - ${userName}`;
-  newComment.className = 'user-comment'; // Optional: add a class for styling
-
-  // Append the new comment to the comment list
   document.getElementById('comment-list').appendChild(newComment);
 
-  // Clear the input fields
   document.getElementById('userName').value = '';
   document.getElementById('comment').value = '';
+});
 
-  // Display a success message (optional)
-  const responseMessage = document.createElement('p');
-  responseMessage.textContent = "Your comment has been submitted!";
-  responseMessage.className = 'success-message';
-  document.getElementById('form-response').appendChild(responseMessage);
-
-  // Remove the success message after a few seconds
-  setTimeout(() => {
-    responseMessage.remove();
-  }, 3000);
-}
-
-// Add event listener to the comment form
-document.getElementById('comment-form').addEventListener('submit', handleCommentSubmit);
-
-
-//create a hamburger for the navigation
+// Hamburger menu toggle
 const getNavigation = document.querySelector('.navigation');
-const gethamburgerButton = document.querySelector('#menu');
-gethamburgerButton.addEventListener('click', ()=>{
-  gethamburgerButton.classList.toggle('open');
+const getHamburgerButton = document.querySelector('#menu');
+getHamburgerButton.addEventListener('click', () => {
+  getHamburgerButton.classList.toggle('open');
   getNavigation.classList.toggle('open');
-})
+});
+
+// Event listener for the checkout button
+document.getElementById('checkout-btn').addEventListener('click', checkout);
+
+// Initialize product display
+displayProducts();

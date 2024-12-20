@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mama Gees Fragrance</title>
-    <link rel="stylesheet" href="styles/all.css">
+    <meta name="description" content="Discover the finest fragrances with Miss Gee Unique Fragrance. Shop now for natural sweet-scented perfumes!">
+    <title>Miss Gee Unique Fragrance</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <header>
@@ -17,7 +17,7 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#products">Products</a>
-        <a href="#comments">What others say</a>
+        <a href="#comments">What Others Say</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -26,20 +26,19 @@
 <section id="home" class="hero">
     <h1>Natural Sweet Scentered Perfumes</h1>
     <p>Discover the benefits of smelling nice.</p>
-    <a href="#products"><button id="shopNowBtn">Shop Now</button></a>
+    <a href="#products" class="btn">Shop Now</a>
 </section>
 
 <section id="products" class="products">
     <h2>Our Products</h2>
     <div class="product-grid">
-        <!-- Product cards will be generated dynamically -->
+        <!-- Product cards will be dynamically generated -->
     </div>
-    
     <aside class="shopping-cart">
         <h3>Shopping Cart</h3>
         <ul id="cart-list"></ul>
-        <p id="total-price"></p>
-        <button id="checkout-btn">Checkout</button>
+        <p id="total-price">Total: $0.00</p>
+        <button id="checkout-btn" class="btn">Checkout</button>
     </aside>
 </section>
 
@@ -56,10 +55,8 @@
   </div>
   <form id="comment-form">
       <input type="text" placeholder="Your Name" id="userName" required />
-      <br />
-      <input type="text" placeholder="Leave a comment" id="comment" required />
-      <br />
-      <button type="submit" id="send-comment-btn">Comment</button>
+      <textarea placeholder="Leave a comment" id="comment" required></textarea>
+      <button type="submit" id="send-comment-btn" class="btn">Comment</button>
   </form>
 </section>
 
@@ -68,12 +65,9 @@
   <p>We'd love to hear from you! Please fill out the form below:</p>
   <form id="contact-form">
       <input type="text" placeholder="Your Name" id="name" required />
-      <br />
       <input type="email" placeholder="Your Email" id="email" required />
-      <br />
       <textarea placeholder="Your Message" id="message" required></textarea>
-      <br />
-      <button type="submit">Send Message</button>
+      <button type="submit" class="btn">Send Message</button>
   </form>
   <div id="form-response"></div>
 </section>
@@ -93,15 +87,15 @@
         </div>
         <div class="social-media">
             <h3>Follow Us</h3>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://wa.me/message/QK3RLBJA2WJRH1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.tiktok.com/@mzzgee5?_t=8qXDe9OOXYc&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/6510.gina?igsh=dndjNHZ0bWdrdm4w" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/message/QK3RLBJA2WJRH1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/@mzzgee5?_t=8qXDe9OOXYc&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/6510.gina?igsh=dndjNHZ0bWdrdm4w" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
     <p>&copy; 2024 Miss Gee <span>MG</span> Unique Fragrance. All rights reserved.</p>
 </footer>
 
-<script src="scripts/scripts.js" defer="defer"></script>
+<script src="scripts/scripts.js" defer></script>
 </body>
 </html>
