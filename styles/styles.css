@@ -55,12 +55,8 @@ header h1 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-image:url(hero.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  text-align: center;
+  background-color: #264653;
+  color: #fff;
   height: 100vh;
   width: 100%;
 }
