@@ -1,101 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the finest fragrances with Miss Gee Unique Fragrance. Shop now for natural sweet-scented perfumes!">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover the finest fragrances with Miss Gee Unique Fragrance. Shop now for natural sweet-scented perfumes!"
+    />
     <title>Miss Gee Unique Fragrance</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-<header>
-    <h1>Miss Gee Unique Fragrance</h1>
-    <div id="menu"></div>
-    <nav class="navigation">
+    <link rel="website" href="images/logo.png">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="logo.jpg" alt="website logo here"></a>
+      <h1>Miss Gee Unique Fragrance</h1>
+      <div id="menu"></div>
+      <nav class="navigation">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#products">Products</a>
         <a href="#comments">What Others Say</a>
         <a href="#contact">Contact</a>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<main>
-<section id="home" class="hero">
-    <h1>Natural Sweet Scentered Perfumes</h1>
-    <p>Discover the benefits of smelling nice.</p>
-    <a href="#products" class="btn">Shop Now</a>
-</section>
+    <main>
+      <section id="home" class="hero">
+            <h1>Natural Sweet Scentered Perfumes</h1>
+            <p>Discover the benefits of smelling nice.</p>
+            <a href="#products" class="btn">Shop Now</a>
+      </section>
 
-<section id="products" class="products">
-    <h2>Our Products</h2>
-    <div class="product-grid">
-        <!-- Product cards will be dynamically generated -->
-    </div>
-    <aside class="shopping-cart">
-        <h3>Shopping Cart</h3>
-        <ul id="cart-list"></ul>
-        <p id="total-price">Total: $0.00</p>
-        <button id="checkout-btn" class="btn">Checkout</button>
-    </aside>
-</section>
+      <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+          <!-- Product cards will be dynamically generated -->
+        </div>
+        <aside class="shopping-cart">
+          <h3>Shopping Cart</h3>
+          <ul id="cart-list"></ul>
+          <p id="total-price">Total: $0.00</p>
+          <button id="checkout-btn" class="btn">Checkout</button>
+        </aside>
+      </section>
 
-<section id="about" class="about">
-    <h2>About Us</h2>
-    <p>We provide perfume oils and products that help you smell good like never before.</p>
-</section>
+      <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+          We provide perfume oils and products that help you smell good like
+          never before.
+        </p>
+      </section>
 
-<section id="comments" class="comments">
-  <h2>What Others Say</h2>
-  <div id="comment-list">
-      <p>"It smells so good I really love it!" - Sarah</p>
-      <p>"It smells so great with quality ingredients!" - John</p>
-  </div>
-  <form id="comment-form">
-      <input type="text" placeholder="Your Name" id="userName" required />
-      <textarea placeholder="Leave a comment" id="comment" required></textarea>
-      <button type="submit" id="send-comment-btn" class="btn">Comment</button>
-  </form>
-</section>
+      <section id="comments" class="comments">
+        <h2>What Others Say</h2>
+        <div id="comment-list">
+          <p>"It smells so good I really love it!" - Sarah</p>
+          <p>"It smells so great with quality ingredients!" - John</p>
+        </div>
+        <form id="comment-form">
+          <input type="text" placeholder="Your Name" id="userName" required />
+          <textarea
+            placeholder="Leave a comment"
+            id="comment"
+            required
+          ></textarea>
+          <button type="submit" id="send-comment-btn" class="btn">
+            Comment
+          </button>
+        </form>
+      </section>
 
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>We'd love to hear from you! Please fill out the form below:</p>
-  <form id="contact-form">
-      <input type="text" placeholder="Your Name" id="name" required />
-      <input type="email" placeholder="Your Email" id="email" required />
-      <textarea placeholder="Your Message" id="message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-  </form>
-  <div id="form-response"></div>
-</section>
-</main>
+      <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Please fill out the form below:</p>
+        <form id="contact-form">
+          <input type="text" placeholder="Your Name" id="name" required />
+          <input type="email" placeholder="Your Email" id="email" required />
+          <textarea placeholder="Your Message" id="message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div id="form-response"></div>
+      </section>
+    </main>
 
-<footer>
-    <div class="footer-container">
+    <footer>
+      <div class="footer-container">
         <div class="footer-nav">
-            <h3>Explore</h3>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#comments">What Others Say</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#comments">What Others Say</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
         <div class="social-media">
-            <h3>Follow Us</h3>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://wa.me/message/QK3RLBJA2WJRH1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.tiktok.com/@mzzgee5?_t=8qXDe9OOXYc&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/6510.gina?igsh=dndjNHZ0bWdrdm4w" target="_blank"><i class="fab fa-instagram"></i></a>
+          <h3>Follow Us</h3>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/message/QK3RLBJA2WJRH1" target="_blank"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@mzzgee5?_t=8qXDe9OOXYc&_r=1"
+            target="_blank"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/6510.gina?igsh=dndjNHZ0bWdrdm4w"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
         </div>
-    </div>
-    <p>&copy; 2024 Miss Gee <span>MG</span> Unique Fragrance. All rights reserved.</p>
-</footer>
+      </div>
+      <p>
+        &copy; 2024 Miss Gee <span>MG</span> Unique Fragrance. All rights
+        reserved.
+      </p>
+    </footer>
 
-<script src="scripts/scripts.js" defer></script>
-</body>
+    <script src="scripts/scripts.js" defer></script>
+  </body>
 </html>
