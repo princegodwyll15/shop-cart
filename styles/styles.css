@@ -250,7 +250,7 @@ header h1 {
   background-color: #f4f4f4;
   width: 50%;
   margin: auto;
-  min-width: 450px;
+  min-width: 400px;
   border: 1px solid #ddd;
   border-radius: var(--border-radius);
   margin-bottom: calc(var(--spacing-unit) / 2);
@@ -289,7 +289,7 @@ header h1 {
   border: none;
   outline: none;
   margin: auto;
-  min-width: 450px;
+  min-width: 400px;
   transition: opacity var(--transition-duration) ease-in;
 }
 .btn:hover{
@@ -306,7 +306,7 @@ textarea{
   background-color: #f4f4f4;
   width: 50%;
   margin: auto;
-  min-width: 450px;
+  min-width: 400px;
   border: 1px solid #ddd;
   border-radius: var(--border-radius);
   margin-bottom: calc(var(--spacing-unit) / 2);
