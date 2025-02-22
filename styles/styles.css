@@ -243,6 +243,11 @@ header h1 {
   text-align: center;
 }
 
+.comments h2,
+.contact h2{
+  margin-top: 50px;
+}
+
 #comment-form input,
 #contact-form input {
   display: block;
@@ -250,7 +255,7 @@ header h1 {
   background-color: #f4f4f4;
   width: 50%;
   margin: auto;
-  min-width: 400px;
+  min-width: 350px;
   border: 1px solid #ddd;
   border-radius: var(--border-radius);
   margin-bottom: calc(var(--spacing-unit) / 2);
@@ -289,7 +294,7 @@ header h1 {
   border: none;
   outline: none;
   margin: auto;
-  min-width: 400px;
+  min-width: 350px;
   transition: opacity var(--transition-duration) ease-in;
 }
 .btn:hover{
@@ -306,7 +311,7 @@ textarea{
   background-color: #f4f4f4;
   width: 50%;
   margin: auto;
-  min-width: 400px;
+  min-width: 350px;
   border: 1px solid #ddd;
   border-radius: var(--border-radius);
   margin-bottom: calc(var(--spacing-unit) / 2);
