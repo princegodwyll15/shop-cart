@@ -168,3 +168,10 @@ document.getElementById('checkout-btn').addEventListener('click', checkout);
 
 // Display Products on Page Load
 displayProducts();
+
+
+//footer content
+const getYear = document.getElementById("year")
+currentYear = new Date().getFullYear();
+getYear.innerHTML =  `&copy; ${currentYear} Miss Gee <span>MG</span> Unique Fragrance. All rights
+reserved.`;
