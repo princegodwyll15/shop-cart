@@ -207,7 +207,7 @@ header h1 {
 }
 
 .product-card button {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--white-color);
   border: none;
   padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
@@ -219,6 +219,12 @@ header h1 {
 
 .product-card button:hover {
   background-color: var(--secondary-color);
+}
+
+#checkout-btn{
+  width: 50%;
+  margin: auto;
+  min-width: 350px;
 }
 
 /* Shopping Cart */
