@@ -68,11 +68,15 @@ header h1 {
   color: var(--white-color);
   text-decoration: none;
   font-size: 1rem;
-  transition: color var(--transition-duration) ease;
+  opacity: 0.8;
+  transition: color var(--transition-duration) ease,
+              opacity var(--transition-duration) ease,
+              border-bottom 4s ease;
 }
 
 .navigation a:hover {
-  color: var(--secondary-color);
+  opacity: 1;
+  border-bottom: 1px solid var(--white-color);
 }
 
 /* Skip Link */
@@ -147,14 +151,14 @@ header h1 {
           transform: scale(1);
         }
         100% {
-          transform: scale(1.1);
+          transform: scale(1.02);
         }
       }
 
       @keyframes fadeIn {
         0% {
           opacity: 0;
-          transform: translateY(20px);
+          transform: translateY(10px);
         }
         100% {
           opacity: 1;
@@ -165,6 +169,9 @@ header h1 {
 /* Products Section */
 .products {
   background: var(--white-color);
+  /* text-align: center; */
+}
+.products h2{
   text-align: center;
 }
 
@@ -202,6 +209,27 @@ header h1 {
   margin-bottom: var(--spacing-unit);
 }
 
+.product-name {
+  color: blue;
+  font-size: 16px;
+}
+
+.price {
+  color: green;
+  font-size: 14px;
+}
+
+.quantity {
+  color: red;
+  font-size: 14px;
+}
+
+.product-detail {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+
 .product-card h3 {
   color: var(--secondary-color);
 }
@@ -222,18 +250,20 @@ header h1 {
 }
 
 #checkout-btn{
-  width: 50%;
-  margin: auto;
-  min-width: 350px;
+  width: auto;
+  min-width: 100px;
+  text-align: left;
 }
 
-/* Shopping Cart */
 .shopping-cart {
   margin-top: calc(var(--spacing-unit) * 2);
   padding: var(--spacing-unit);
-  background: #f4f4f4;
-  border: 1px solid #ddd;
-  border-radius: var(--border-radius);
+}
+
+.view-more{
+  color: var(--primary-color);
+  padding: 1rem;
+  text-decoration: none;
 }
 
 /* About Section */
@@ -423,23 +453,3 @@ footer {
   transform: rotate(-45deg);
 }
 
-@media (max-width: 768px) {
-  #menu {
-    display: block;
-  }
-
-  .navigation {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--primary-color);
-    padding: var(--spacing-unit);
-  }
-
-  .navigation.open {
-    display: flex;
-  }
-}

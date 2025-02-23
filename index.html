@@ -8,7 +8,10 @@
       content="Discover the finest fragrances with Miss Gee Unique Fragrance. Shop now for natural sweet-scented perfumes!"
     />
     <meta name="author" content="Miss Gee Unique Fragrance" />
-    <meta name="keywords" content="perfume, fragrance, natural scents, Miss Gee, unique fragrance" />
+    <meta
+      name="keywords"
+      content="perfume, fragrance, natural scents, Miss Gee, unique fragrance"
+    />
     <title>Miss Gee Unique Fragrance</title>
     <link rel="icon" href="images/logo.png" />
     <link rel="stylesheet" href="styles/styles.css" />
@@ -40,7 +43,7 @@
         <div class="hero-content">
           <h1>Welcome to Our Website</h1>
           <p>Discover amazing products and services tailored just for you.</p>
-          <a href="#" class="btn">Explore More</a>
+          <a href="#products" class="btn">Explore More</a>
         </div>
       </section>
 
@@ -48,12 +51,15 @@
       <section id="products" class="products">
         <h2>Our Products</h2>
         <div class="product-grid"></div>
-        <aside class="shopping-cart">
-          <h3>Shopping Cart</h3>
-          <ul id="cart-list"></ul>
-          <p id="total-price">Total: $0.00</p>
-          <button id="checkout-btn" class="btn">Checkout</button>
-        </aside>
+        <div><a href="#" class="view-more">View more porducts</a></div>
+        <div class="shopping-cart-container">
+          <aside class="shopping-cart">
+            <h3>Shopping Cart</h3>
+            <div id="cart-list"></div>
+            <p id="total-price">Total: $0.00</p>
+            <button id="checkout-btn" class="btn">Checkout</button>
+          </aside>
+        </div>
       </section>
 
       <!-- About Section -->
@@ -74,7 +80,12 @@
         </div>
         <form id="comment-form">
           <input type="text" placeholder="Your Name" id="userName" required />
-          <input type="text" placeholder="Leave a comment" id="comment" required />
+          <input
+            type="text"
+            placeholder="Leave a comment"
+            id="comment"
+            required
+          />
           <button id="send-comment-btn" class="btn">Comment</button>
         </form>
       </section>
@@ -86,7 +97,8 @@
         <form id="contact-form">
           <input type="text" placeholder="Your Name" id="name" required />
           <input type="email" placeholder="Your Email" id="email" required />
-          <textarea placeholder="Your Message" id="message" required></textarea><br>
+          <textarea placeholder="Your Message" id="message" required></textarea
+          ><br />
           <button type="submit" class="btn" id="send-msg">Send Message</button>
         </form>
         <div id="form-response"></div>
@@ -107,14 +119,28 @@
         </div>
         <div class="social-media">
           <h3>Follow Us</h3>
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://wa.me/message/QK3RLBJA2WJRH1" target="_blank" aria-label="WhatsApp">
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://wa.me/message/QK3RLBJA2WJRH1"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
             <i class="fab fa-whatsapp"></i>
           </a>
-          <a href="https://www.tiktok.com/@mzzgee5?_t=8qXDe9OOXYc&_r=1" target="_blank" aria-label="TikTok">
+          <a
+            href="https://www.tiktok.com/@mzzgee5?_t=8qXDe9OOXYc&_r=1"
+            target="_blank"
+            aria-label="TikTok"
+          >
             <i class="fab fa-tiktok"></i>
           </a>
-          <a href="https://www.instagram.com/6510.gina?igsh=dndjNHZ0bWdrdm4w" target="_blank" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/6510.gina?igsh=dndjNHZ0bWdrdm4w"
+            target="_blank"
+            aria-label="Instagram"
+          >
             <i class="fab fa-instagram"></i>
           </a>
         </div>
@@ -125,6 +151,5 @@
       </p>
     </footer>
     <script src="scripts/scripts.js"></script>
-    </body>
-    </html>
-
+  </body>
+</html>
