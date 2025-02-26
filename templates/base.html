@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Discover the finest fragrances with Miss Gee Unique Fragrance. 
+      Shop now for natural sweet-scented perfumes!"
+    />
+    <meta name="author" content="Miss Gee Unique Fragrance" />
+    <meta
+      name="keywords"
+      content="perfume, fragrance, natural scents, Miss Gee, unique fragrance"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='responsive.css' )}}">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome.min.css.css') }}">
+
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #264653;
+            --secondary-color:rgba(38, 70, 83, 0.6); /* Semi-transparent overlay */
+            --accent-color: #e76f51;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --white-color: #fff;
+            --spacing-unit: 1rem;
+            --border-radius: 10px;
+            --transition-duration: 0.3s;
+            }
+         /* Header */
+        header {
+            background: var(--primary-color);
+            color: var(--white-color);
+            padding: var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        #logo {
+            width: 100px;
+            height: 50px;
+            object-fit: contain;
+            padding: calc(var(--spacing-unit) / 2);
+        }
+        
+        header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: var(--spacing-unit);
+        }
+        
+        .navigation a {
+            color: var(--white-color);
+            text-decoration: none;
+            font-size: 1rem;
+            opacity: 0.8;
+            transition: color var(--transition-duration) ease,
+                        opacity var(--transition-duration) ease,
+                        border-bottom 4s ease;
+        }
+        
+        .navigation a:hover {
+            opacity: 1;
+            border-bottom: 1px solid var(--white-color);
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: var(--white-color);
+            padding: 8px;
+            z-index: 1001;
+            transition: top 0.3s;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+
+         /* Hamburger Menu */
+        #menu {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--white-color);
+            position: relative;
+        }
+        
+        .hamburger::before,
+        .hamburger::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--white-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .hamburger::before {
+            transform: translateY(-8px);
+        }
+        
+        .hamburger::after {
+            transform: translateY(8px);
+        }
+        
+        #menu.open .hamburger {
+            background: transparent;
+        }
+        
+        #menu.open .hamburger::before {
+            transform: rotate(45deg);
+        }
+        
+        #menu.open .hamburger::after {
+            transform: rotate(-45deg);
+        }
+  
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--white-color);
+            padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
+            text-align: center;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            gap: calc(var(--spacing-unit) * 2);
+            flex-wrap: wrap;
+        }
+        
+        .footer-nav ul {
+            list-style: none;
+        }
+        
+        .footer-nav ul li {
+            margin-bottom: calc(var(--spacing-unit) / 2);
+        }
+        
+        .footer-nav ul li a {
+            color: var(--white-color);
+            text-decoration: none;
+        }
+        
+        .footer-nav ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-media a {
+            color: var(--white-color);
+            margin-right: calc(var(--spacing-unit) / 2);
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        
+        .social-media a:hover {
+            color: var(--accent-color);
+        }
+  
+  
+    </style>
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='logo.png') }}">
+    <title>{% block title %} Miss Gee Unique Fragrance {% endblock %}</title>
+    {% block extra_head %} {% endblock %}
+</head>
+<body>
+    <header>
+      <h1>Miss Gee Unique Fragrance</h1> 
+      <button id="menu" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#comments">What Others Say</a>
+        <a href="#contact">Contact</a>
+
+      </nav>
+    </header>
+    
+    {% block content %}
+    
+    {% endblock %}
+    <footer>
+        <div class="footer-container">
+          <div class="footer-nav">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#comments">What Others Say</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://wa.me/message/QK3RLBJA2WJRH1"
+              target="_blank"
+              aria-label="WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@mzzgee5?_t=8qXDe9OOXYc&_r=1"
+              target="_blank"
+              aria-label="TikTok"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+                href="https://www.instagram.com/6510.gina?igsh=dndjNHZ0bWdrdm4w"
+                target="_blank"
+                aria-label="Instagram"
+            >
+                <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      <p id="year">
+        &copy; 2024 Miss Gee <span>MG</span> Unique Fragrance. All rights
+        reserved.
+      </p>
+    </footer>
+    {% block extra_script %}{% endblock %}
+
+</body>
+</html>
