@@ -308,7 +308,7 @@ header h1 {
 }
 
 .about-card i{
-  /* font-size: 40px; */
+  font-size: 40px;
   color: var(--accent-color);
 }
 .about-card p{
