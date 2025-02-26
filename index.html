@@ -16,14 +16,23 @@
     <link rel="icon" href="images/logo.png" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
+      <img src="images/logo.png" alt="logo here" id="logo">
       <h1>Miss Gee Unique Fragrance</h1>
       <button id="menu" aria-label="Menu">
         <span class="hamburger"></span>
@@ -51,7 +60,8 @@
       <section id="products" class="products">
         <h2>Our Products</h2>
         <div class="product-grid"></div>
-        <div><a href="#" class="view-more">View more porducts</a></div>
+        <div class="view-more-cont">
+        </div>
         <div class="shopping-cart-container">
           <aside class="shopping-cart">
             <h3>Shopping Cart</h3>
@@ -64,11 +74,16 @@
 
       <!-- About Section -->
       <section id="about" class="about">
-        <h2>About Us</h2>
+        <h2>Welcome to Miss Gee Unique Fragrance</h2>
         <p>
-          We provide perfume oils and products that help you smell good like
-          never before.
+          Welcome to Miss Gee Unique Fragrance. Indulge your senses in the sweetest
+          fragrances on earth. At Miss Gee Unique Fragrance, we're passionate about
+          crafting exquisite perfumes that evoke emotions, spark memories, and
+          make life's moments even sweeter.
         </p>
+        <div class="about-content">
+          <!-- display about content dynamically -->
+        </div>
       </section>
 
       <!-- Comments Section -->
@@ -104,7 +119,6 @@
         <div id="form-response"></div>
       </section>
     </main>
-
     <footer>
       <div class="footer-container">
         <div class="footer-nav">
@@ -150,6 +164,9 @@
         reserved.
       </p>
     </footer>
-    <script src="scripts/scripts.js"></script>
+    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/animy.js" defer></script>
+    <script src="scripts/aboutSection.js" defer></script>
+    <script src="scripts/proudcts.js"></script>
   </body>
 </html>

@@ -1,4 +1,10 @@
 @media (max-width: 768px) {
+  header h1 {
+    display: none;
+  }
+  .hero{
+    height: 300px;
+  }
     #menu {
       display: block;
     }
@@ -9,6 +15,7 @@
       position: absolute;
       top: 100%;
       left: 0;
+      text-align: center;
       width: 100%;
       background: var(--primary-color);
       padding: var(--spacing-unit);
@@ -17,5 +24,28 @@
     .navigation.open {
       display: flex;
     }
+
+    .about-content {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+    }
+
+    .product-card img{
+      height: 100px;
+    }
+
+   .about-card p, .about p{
+      font-size: 14px;
+      width: 100%;
+      text-align: justify;
+    }
+    .about-card i{
+      font-size: 20px;
+      text-align: center;
+    }
+    .about-card h2, .about h2{
+      font-size: 16px;
+    }
+
   }
   
