@@ -1,0 +1,80 @@
+{% extends "base.html"%}
+{% block extra_head %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+{% endblock %}
+
+{% block content%} 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Hero Section">
+      <div class="hero-content">
+        <h1>Welcome to Our Website</h1>
+        <p>Discover amazing products and services tailored just for you.</p>
+        <a href="#products" class="btn">Explore More</a>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <h2>Our Products</h2>
+      <div class="product-grid"></div>
+      <div><a href="#" class="view-more">View more porducts</a></div>
+      <div class="shopping-cart-container">
+        <aside class="shopping-cart">
+          <h3>Shopping Cart</h3>
+          <div id="cart-list"></div>
+          <p id="total-price">Total: $0.00</p>
+          <button id="checkout-btn" class="btn">Checkout</button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+          We provide perfume oils and products that help you smell good like
+          never before.
+        </p>
+    </section>
+
+    <!-- Comments Section -->
+    <section id="comments" class="comments">
+        <h2>What Others Say</h2>
+        <div id="comment-list">
+          <p>"It smells so good I really love it!" - Sarah</p>
+          <p>"It smells so great with quality ingredients!" - John</p>
+        </div>
+        <form id="comment-form">
+          <input type="text" placeholder="Your Name" id="userName" required />
+          <input
+            type="text"
+            placeholder="Leave a comment"
+            id="comment"
+            required
+          />
+          <button id="send-comment-btn" class="btn">Comment</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Please fill out the form below:</p>
+        <form id="contact-form">
+          <input type="text" placeholder="Your Name" id="name" required />
+          <input type="email" placeholder="Your Email" id="email" required />
+          <textarea placeholder="Your Message" id="message" required></textarea
+          ><br />
+          <button type="submit" class="btn" id="send-msg">Send Message</button>
+        </form>
+        <div id="form-response"></div>
+    </section>
+</main>
+{% endblock %}
+{% block extra_script %}
+<script src="{{url_for('static', filename='scripts.js')}}"></script>
+{% endblock %}

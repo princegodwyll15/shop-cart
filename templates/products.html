@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{% block extra_head %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}">
+{% endblock%}
+
+{% block content %} 
+
+<section id="products" class="products">
+    <h1>Our Products</h1>
+    <div class="product-grid"></div>
+</section>
+{% endblock %}
