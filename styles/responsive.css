@@ -2,50 +2,109 @@
   header h1 {
     display: none;
   }
-  .hero{
-    height: 300px;
+  .hero {
+    height: auto;
   }
-    #menu {
-      display: block;
-    }
-  
-    .navigation {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      text-align: center;
-      width: 100%;
-      background: var(--primary-color);
-      padding: var(--spacing-unit);
-    }
-  
-    .navigation.open {
-      display: flex;
-    }
-
-    .about-content {
-      grid-template-columns: auto;
-      grid-template-rows: auto auto auto;
-    }
-
-    .product-card img{
-      height: 100px;
-    }
-
-   .about-card p, .about p{
-      font-size: 14px;
-      width: 100%;
-      text-align: justify;
-    }
-    .about-card i{
-      font-size: 20px;
-      text-align: center;
-    }
-    .about-card h2, .about h2{
-      font-size: 16px;
-    }
-
+  #menu {
+    display: block;
   }
-  
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background: var(--secondary-color);
+    padding: var(--spacing-unit);
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+  .hero-left {
+    margin-top: 400px;
+  }
+
+  .hero-right {
+    font-size: 1rem;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--accent-color);
+  }
+
+  .about-content {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  .product-card img {
+    height: 100px;
+  }
+
+  .about-card p,
+  .about p {
+    font-size: 14px;
+    width: 100%;
+    text-align: justify;
+  }
+  .about-card i {
+    font-size: 20px;
+    text-align: center;
+  }
+  .about-card h2,
+  .about h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header h1 {
+    display: none;
+  }
+  .hero {
+    height: auto;
+  }
+  #menu {
+    display: block;
+  }
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background: var(--secondary-color);
+    padding: var(--spacing-unit);
+  }
+  .navigation.open {
+    display: flex;
+  }
+  .about-content {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+  .product-card img {
+    height: 100px;
+  }
+  .about-card p,
+  .about p {
+    font-size: 14px;
+    width: 100%;
+    text-align: justify;
+  }
+  .about-card i {
+    font-size: 20px;
+    text-align: center;
+  }
+  .about-card h2,
+  .about h2 {
+    font-size: 16px;
+  }
+}

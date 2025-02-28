@@ -5,39 +5,20 @@
   box-sizing: border-box;
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100%) scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(200px) scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
 :root {
-  --primary-color: #000;
-  --secondary-color: #cbc7c7; /* Semi-transparent overlay */
-  --accent-color: #ffc107;
-  --tertiary-color: #fff;
+  --primary-color: #eec3b4;
+  --secondary-color: #526d96; /* Semi-transparent overlay */
+  --accent-color: #ef9587;
+  --tertiary-color: #fefbf3;
   --spacing-unit: 1rem;
   --border-radius: 10px;
   --transition-duration: 0.3s;
-  --body-font : "Roboto", serif;
+  --body-font: "Roboto", serif;
+  --base-font-size: 16px; /* Base font size for rem calculations */
 }
 
 html {
+  font-size: 100%; /* 1rem = 16px */
   scroll-behavior: smooth;
 }
 
@@ -48,17 +29,27 @@ body {
   background-color: var(--background-color);
 }
 
-h1,
-h2,
-h3,
+h1 {
+  font-size: 2rem; /* 32px */
+}
+
+h2 {
+  font-size: 1.75rem; /* 28px */
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
+}
+
 p {
+  font-size: 1rem; /* 16px */
   margin-bottom: var(--spacing-unit);
 }
 
 /* Header */
 header {
-  color: var(--accent-color);
-  background: var(--primary-color);
+  color: var(--tertiary-color);
+  background: var(--secondary-color);
   padding: var(--spacing-unit);
   display: flex;
   justify-content: space-between;
@@ -68,14 +59,14 @@ header {
   z-index: 1000;
 }
 
-#logo{
-  width: 100px;
-  height: 100px;
+#logo {
+  width: 70px;
+  height: 70px;
   object-fit: contain;
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* 19.2px */
 }
 
 .navigation {
@@ -83,58 +74,59 @@ header h1 {
 }
 
 .navigation a {
-  padding: .5rem;
-  color: var(--accent-color);
+  margin-right: 1rem;
+  color: var(--tertiary-color);
   text-decoration: none;
-  font-size: 1.2rem;
+  padding: 0.5rem;
+  font-size: 1.2rem; /* 19.2px */
   opacity: 0.8;
   transition: transform var(--transition-duration) ease,
-    opacity var(--transition-duration) ease, border-bottom 4s ease;
+      opacity var(--transition-duration) ease, border-bottom 4s ease;
 }
 
 .navigation a:hover {
   opacity: 1;
   transform: translateY(-10px);
+  color: var(--accent-color);
 }
 
 /* Hero Section */
 .hero {
+  height: auto;
   width: 100%;
+}
+
+.hero-card {
+  position: relative;
+  color: var(--accent-color);
+  font-size: 1.7rem; /* 24px */
+  font-weight: 900;
   height: 500px;
-  background-image: linear-gradient(to bottom, var(--accent-color), var(--primary-color));
-  /* background-image: url("https://www.lummi.ai/photo/modern-fragrance-bottle-gow0u"); */
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  padding: 1rem;
+  background: linear-gradient(40deg, var(--secondary-color) 50%, var(--tertiary-color) 50%);
 }
 
-
-.hero .hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  animation: fadeIn 2s ease-in-out;
+.hero-left {
+  position: absolute;
+  padding: 1rem;
+  color: var(--primary-color);
+  top: 0;
+  left: 0;
 }
 
-.hero .btn {
-  background-color: var(--white-color);
-  color: var(--secondary-color);
-  padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
-  text-align: center;
-  text-decoration: none;
-  border-radius: var(--border-radius);
-  transition: background-color var(--transition-duration) ease,
-    transform var(--transition-duration) ease;
-}
+.hero-left button {
+  border-radius: 2px;
+  padding: .5rem;
+  font-size: 1rem; /* 16px */
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);}
 
-.hero .btn:hover {
-  color: var(--white-color);
-  background-color: var(--primary-color);
-  transform: scale(1.05);
+.hero-right {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* Products Section */
@@ -143,12 +135,11 @@ header h1 {
   background: var(--white-color);
   /* text-align: center; */
 }
-.products h2 {
-  text-align: center;
-}
 
 .products h2 {
-  color: var(--primary-color);
+  text-align: center;
+  font-size: 1.75rem; /* 28px */
+  color: var(--secondary-color);
 }
 
 .product-grid {
@@ -163,13 +154,14 @@ header h1 {
 .product-card {
   transition: transform var(--transition-duration), box-shadow var(--transition-duration);
   opacity: 0;
-  animation: slideInLeft 0.8s ease-out forwards;  background: var(--background-color);
+  animation: slideInLeft 0.8s ease-out forwards;
+  background: var(--background-color);
   padding: var(--spacing-unit);
   border: 1px solid #ddd;
   border-radius: var(--border-radius);
   text-align: center;
   transition: transform var(--transition-duration) ease,
-    box-shadow var(--transition-duration) ease;
+      box-shadow var(--transition-duration) ease;
 }
 
 .product-card:hover {
@@ -187,44 +179,46 @@ header h1 {
 
 .product-name {
   color: blue;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
 }
 
 .price {
   color: green;
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
 }
 
 .quantity {
   color: red;
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
 }
 
 .product-detail {
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
   font-weight: normal;
 }
 
 .product-card h3 {
-  color: var(--primary-color);
+  font-variant: small-caps;
+  color: var(--secondary-color);
+  font-size: 1.25rem; /* 20px */
 }
 
 .product-card button {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--tertiary-color);
   border: none;
   padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
   border-radius: calc(var(--border-radius) / 2);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1rem; /* 16px */
   transition: background var(--transition-duration);
 }
 
 .product-card button:hover {
   background-color: var(--accent-color);
   color: var(--primary-color);
-
 }
+
 .product-card:nth-child(odd) {
   animation-delay: 0.2s;
 }
@@ -251,13 +245,14 @@ header h1 {
   padding: var(--spacing-unit);
 }
 
-.view-more-cont{
+.view-more-cont {
   display: flex;
   width: 90%;
   margin: 1rem auto;
 }
+
 .view-more {
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 10px;
   background-color: var(--secondary-color);
   color: var(--white-color);
@@ -266,23 +261,25 @@ header h1 {
 
 /* About Section */
 .about {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   width: 100%;
   color: #fff;
   padding: 2rem;
 }
 
-
-.about p, .about h2{
+.about p,
+.about h2 {
   margin: auto;
   color: var(--accent-color);
   text-align: center;
 }
-.about p{
+
+.about p {
   color: var(--tertiary-color);
   width: 50%;
   padding: 1rem;
 }
+
 .about-content {
   width: 95%;
   margin: auto;
@@ -298,20 +295,22 @@ header h1 {
   color: #000;
   transition: transform var(--transition-duration), box-shadow var(--transition-duration);
   opacity: 0;
-  animation: slideInUp 1s ease-in-out forwards;  background: var(--background-color);
+  animation: slideInUp 1s ease-in-out forwards;
+  background: var(--background-color);
   padding: var(--spacing-unit);
   border: 1px solid #ddd;
   border-radius: var(--border-radius);
   text-align: center;
   transition: transform var(--transition-duration) ease,
-              box-shadow var(--transition-duration) ease;
+      box-shadow var(--transition-duration) ease;
 }
 
-.about-card i{
-  font-size: 40px;
+.about-card i {
+  font-size: 2.5rem; /* 40px */
   color: var(--accent-color);
 }
-.about-card p{
+
+.about-card p {
   color: var(--tertiary-color);
   width: 100%;
   text-align: justify;
@@ -327,13 +326,14 @@ header h1 {
 .comments h2,
 .contact h2 {
   margin-top: 50px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 1.75rem; /* 28px */
 }
 
 #comment-form input,
 #contact-form input {
   display: block;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   background-color: #f4f4f4;
   width: 50%;
   margin: auto;
@@ -357,9 +357,9 @@ header h1 {
 }
 
 .btn {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--tertiary-color);
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
   padding: calc(var(--spacing-unit) / 2);
   cursor: pointer;
   width: 50%;
@@ -370,9 +370,11 @@ header h1 {
   min-width: 350px;
   transition: opacity var(--transition-duration) ease-in;
 }
+
 .btn:hover {
   opacity: 1;
 }
+
 #send-msg {
   margin-bottom: 30px;
 }
@@ -380,7 +382,7 @@ header h1 {
 textarea {
   resize: none;
   display: block;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   background-color: #f4f4f4;
   width: 50%;
   margin: auto;
@@ -402,8 +404,8 @@ textarea {
 
 /* Footer */
 footer {
-  background-color: var(--primary-color);
-  color: var(--accent-color);
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
   padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
   text-align: center;
 }
@@ -435,13 +437,8 @@ footer {
 .social-media a {
   color: var(--accent-color);
   margin-right: calc(var(--spacing-unit) / 2);
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* 24px */
   text-decoration: none;
-  transition: transform ease;
-}
-
-.social-media a:hover {
-  color: var(--primary-color);
 }
 
 /* Hamburger Menu */
@@ -455,9 +452,9 @@ footer {
 
 .hamburger {
   display: block;
-  width: 25px;
+  width: 40px;
   height: 3px;
-  background: var(--accent-color);
+  background-color: var(--tertiary-color);
   position: relative;
 }
 
@@ -467,7 +464,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: var(--accent-color);
+  background-color: var(--tertiary-color);
   transition: transform 0.3s ease;
 }
 
